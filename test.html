@@ -1,0 +1,598 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0040)http://49.122.0.29:8002/xgxt/qjsqbase.do -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+			
+
+
+
+
+
+
+
+
+
+  
+		
+		<title>学生工作管理信息系统</title>
+		
+		<meta http-equiv="Pragma">
+		<meta http-equiv="Cache-Control">
+		<meta http-equiv="Expires">
+		<meta name="Copyright" content="正方软件 zfsoft">
+	<!--<base target="_self">--><base href="." target="_self">
+	<script type="text/javascript" src="./function.js.下载"></script>
+	<script type="text/javascript" src="./jquery-1.5.2.min.js.下载"></script>
+	<script type="text/javascript" src="./ymPrompt.js.下载"></script>
+	<script type="text/javascript" src="./message.js(1).下载"></script>
+	<script language="javascript" src="./commFunction.js.下载"></script>
+	<script type="text/javascript" src="./json.js.下载"></script>
+	<link rel="stylesheet" href="./public.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./module.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./ymPrompt.css" type="text/css" media="all"> 
+
+	<script type="text/javascript" src="./lhgdialog.min.js.下载"></script>
+	
+	<script type="text/javascript">
+		var stylePath = "http://49.122.0.29:8002/zfstyle_v4/";
+		var myDwrPath="";
+		jQuery.ajaxSetup({
+			 contentType:"application/x-www-form-urlencoded;charset=utf-8"
+		});
+	</script>
+	<!--[if IE 6]> 
+	<script src="js/ie6comm.js"></script> 
+	<script> 
+	DD_belatedPNG.fix('img,.mainbody,.topframe,.mainframe,.botframe,.menu,.type_mainframe'); 
+	</script> 
+	<![endif]-->
+	
+
+	
+
+		<script type="text/javascript" src="./dataGrid.js.下载"></script>
+		<script type="text/javascript" src="./jquery.form.js.下载"></script>
+		<script type="text/javascript" src="./qjsq.js.下载"></script>
+				<script type="text/javascript">
+					jQuery(function(){
+					     var gridSetting = {
+									caption:"请假申请列表",
+									pager:"pager",
+									url:"qjsq.do?method=list&type=query",
+									params:getSuperSearch(),
+									colList:[
+									   {label:'请假申请id',name:'qjsqid', index: 'qjsqid',key:true,hidden:true},
+									   {label:'审批流程',name:'splcid', index: 'splcid',hidden:true},
+									   {label:'学年',name:'xn', index: 'xn'},
+									   {label:'学期',name:'xqmc', index: 'xqmc'},
+									   {label:'学号',name:'xh', index: 'xh',formatter:dcmcLink},
+									   {label:'姓名',name:'xm', index: 'xm'},
+									   {label:'请假类型',name:'qjlxmc', index: 'qjlxmc'},
+									   {label:'请假天数',name:'qjts', index: 'qjts'},
+									   {label:'申请时间',name:'sqsj', index: 'sqsj'},
+									   {label:'状态',name:'qjzt', index: 'qjzt',hidden:true},
+									   {label:'审核状态',name:'shztmc', index: 'shzt'},
+									   {label:'审核状态',name:'shzt', index: 'shzt',hidden:true},
+									   {label:'销假状态',name:'xjztmc', index: 'xjztmc'}
+									],
+									sortname: "sqsj",
+								 	sortorder: "desc"
+								}
+							jQuery("#dataTable").initGrid(gridSetting);
+					});
+				</script>
+	</head>
+	<body marginwidth="0" marginheight="0">
+		<div class="tab_cur">
+			<p class="location">
+				<em>您的当前位置：</em><a>日常事务-请假管理-请假申请</a>
+			</p>
+		</div>
+	<form name="qjsqForm" method="post" action="http://49.122.0.29:8002/xgxt/qjsq.do?method=list&amp;type=query">
+		<input type="hidden" name="xyV" id="xyV" value="">
+<input type="hidden" name="zyV" id="zyV" value="">
+<input type="hidden" name="bjV" id="bjV" value="">
+<input type="hidden" name="njV" id="njV" value="">
+<input type="hidden" name="xhV" id="xhV" value="">
+<input type="hidden" name="xmV" id="xmV" value="">
+<input type="hidden" name="xxdm" id="xxdm" value="10484">
+<input type="hidden" name="mklx" id="mklx" value="">
+<input type="hidden" name="userDep" id="userDep" value="45">
+<input type="hidden" name="userType" id="userType" value="stu">
+<input type="hidden" name="pk" id="pk" value="">
+<input type="hidden" name="pkValue" id="pkValue" value="">
+<input type="hidden" name="doType" id="doType" value="">
+<input type="hidden" name="userName" id="userName" value="20202200113">
+<input type="hidden" name="userStatus" id="userStatus" value="stu">
+<input type="hidden" name="tableName" id="tableName" value="">
+<input type="hidden" name="realTable" id="realTable" value="">
+<input type="hidden" name="message" id="message" value="">
+<input type="hidden" name="xzxsKey" id="xzxsKey" value="">
+<input type="hidden" name="yxzxss" id="yxzxss" value="">
+
+<input type="hidden" name="searchType" id="searchType" value="">
+
+<input type="hidden" id="isFdy" name="isFdy" value="false">
+<input type="hidden" id="isBzr" name="isBzr" value="false">
+<input type="hidden" id="gyglyQx" name="gyglyQx" value="no">
+
+<input type="hidden" id="path" name="searchModel.path" value="qjsqbase.do">
+
+<!-- ???ò -->
+<input type="hidden" id="arrange" name="arrange" value="">
+<input type="hidden" id="fashion" name="fashion" value="asc">
+
+<!-- ·????à?? -->
+<input type="hidden" id="editPageSize" name="editPageSize" value="">
+
+<input type="hidden" name="ryfw" id="ryfw" value="">
+
+<!-- ?§?ú????????°??? -->
+<button type="button" id="btn_setXsxx" onclick="" style="display:none">????</button>
+
+<!-- ?????á?????? begin -->
+<input type="hidden" id="lable_one_tj" value="请选择一条您要提交的记录！">
+<input type="hidden" id="lable_one_xg" value="请选择一条您要修改的记录！">
+<input type="hidden" id="lable_one_cx" value="请选择一条您要撤销的记录！">
+<input type="hidden" id="lable_one_lcgz" value="请选择一条流程跟踪记录！">
+<input type="hidden" id="lable_some_tj" value="请选择您要提交的记录！">
+<input type="hidden" id="lable_some_sc" value="请选择您要删除的记录！">
+<input type="hidden" id="lable_wjt_yth_tj" value="请选择未提交或者已退回的记录！">
+<input type="hidden" id="lable_wjt_yth_xg" value="只能修改未提交或者已退回的记录！">
+<input type="hidden" id="lable_wjt_sc" value="只能删除未提交的记录！">
+<input type="hidden" id="lable_shz_cx" value="只有审核中的记录才能被撤销！">
+<input type="hidden" id="lable_confirm_tj" value="您确定要提交选择的记录吗？">
+<input type="hidden" id="lable_confirm_cx" value="您确定要撤销选择的记录吗？">
+<input type="hidden" id="lable_confirm_sc" value="您确定要删除选择的记录吗？">
+<input type="hidden" id="lable_jcszwcsh" value="基础设置未初始化，请联系管理员！">
+<input type="hidden" id="lable_dqwkfsq" value="当前未开放申请，请联系管理员！">
+<input type="hidden" id="lable_wxglcxx" value="无相关流程信息！">
+<!-- ?????á?????? end -->
+
+
+
+		<input type="hidden" id="swtjs" value="6008">
+		<input type="hidden" id="search_go" onclick="reload()">
+		<input type="hidden" name="query" id="query" value="">
+		<div class="toolbox">
+			<!-- 按钮 -->
+			<div class="buttonbox">
+				<ul>
+						
+						<li>
+							<a href="javascript:void(0);" onclick="add();return false;" class="btn_zj">申请</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);" onclick="update();return false;" class="btn_xg">修改</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);" onclick="del();return false;" class="btn_sc">删除</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);" onclick="pltj();return false;" class="btn_tj">提交</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);" onclick="cancle();return false;" class="btn_sr">撤销</a>
+						</li>
+						
+						<li><a href="javascript:void(0);" onclick="rcxwshLcinfo();return false;" title="选中一条记录，点击该按钮可以查看审核流程。" class="btn_cs">流程跟踪</a></li>
+						<li><a href="javascript:void(0);" onclick="printQjsqb(&#39;qjsq.do?method=printQjsqb&#39;);return false;" class="btn_down">下载请假申请表</a></li>   
+							   
+				</ul>
+			</div>
+				<!-- 过滤条件 -->	
+				
+
+
+
+
+
+
+
+
+
+
+<script language="javascript" src="./commFunction.js.下载"></script>
+<script language="javascript" src="./searchTj.js.下载"></script>
+<script language="javascript" src="./searchGxhTj.js.下载"></script>
+<script language="javascript" src="./searchTjByGygl.js.下载"></script>
+<script language="javascript" src="./searchTjByJxjz.js.下载"></script>
+<script language="javascript" src="./searchTjByWjlb.js.下载"></script>
+<script language="javascript" src="./searchTjByQx.js.下载"></script>
+<script language="javascript" src="./searchTjByPjpy.js.下载"></script>
+<script language="javascript" src="./searchTjByGygl_Third.js.下载"></script>
+<script type="text/javascript" src="./engine.js.下载"></script> 
+<script type="text/javascript" src="./util.js.下载"></script>
+<script language="javascript" src="./searchUtil.js.下载"></script>
+<script language="javascript" defer="defer">
+
+//var alert_info = if0.showModelessDialog("javascript:alert();window.close();","","status:no;resizable:no;help:no;dialogHeight:30px;dialogWidth:40px;");   
+function setTsMsg(){
+	//模块路径，页面必须有该隐藏域
+	var path  = $("path").value;
+	
+	//------------获得模糊查询信息------------
+	var tableName = "xg_search_szb";
+	var colList = ["tj","mc"]; 
+	var pk = "path||lx"; 
+	var pkValue = path+"mhcx";
+	var query = "";
+	if($("ts_msg").value == ""){
+	
+		//查询提示信息
+		var html_span = "可以录入多个查询条件，以";
+			html_span+= "<font color='blue'>半角空格</font>";
+			html_span+= "区分(针对";
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		html_span += "所选择的查询范围进行模糊查询)";
+
+		$("ts_msg").value = html_span;	
+		$("tsxx_span").innerHTML = html_span;
+	}else{
+		$("tsxx_span").innerHTML = $("ts_msg").value;
+	}
+}
+
+//根据过滤条件执行查询操作
+function setSearchTj(){	
+	
+	var node = $("searchTjDiv");
+	
+	var mhcxHtml = node.innerHTML;
+	node.innerHTML = "";
+	
+	//学院
+	var xy = getYxtj("xy");
+
+	for(var i=0;i<xy.length;i++){
+		var tmp = document.createElement("input");
+			tmp.type = "hidden";
+			tmp.name = "searchModel.search_tj_xy";
+			tmp.value = xy[i];
+			node.appendChild(tmp);
+	}
+	
+	//专业
+	var zy = getYxtj("zy");
+	
+	for(var i=0;i<zy.length;i++){
+		var tmp = document.createElement("input");
+			tmp.type = "hidden";
+			tmp.name = "searchModel.search_tj_zy";
+			tmp.value = zy[i];
+			node.appendChild(tmp);
+	}
+	
+	//班级
+	var bj = getYxtj("bj");
+	
+	for(var i=0;i<bj.length;i++){
+		var tmp = document.createElement("input");
+			tmp.type = "hidden";
+			tmp.name = "searchModel.search_tj_bj";
+			tmp.value = bj[i];
+			node.appendChild(tmp);
+	}
+	
+	//简易条件
+	for(var i=0;i<jytj.length;i++){
+	
+		var tj = jytj[i];
+		var tjz = getYxtj(tj);
+		for(var j=0;j<tjz.length;j++){
+			var tmp = document.createElement("input");
+				tmp.type = "hidden";
+				tmp.name = "searchModel.search_tj_"+tj;
+				tmp.value = tjz[j];
+				node.appendChild(tmp);
+		}
+	}
+	
+	// ---------------构建时间隐藏域 begin by qlj---------------- 
+	createHidTime(node);
+	createHidNum(node);
+	// ---------------构建时间隐藏域 end  by qlj---------------- 
+	return false;	
+		
+}
+
+//关闭More
+function closeMore(){
+
+	if($("yxtj_gxh_div")){
+		
+	}else{
+		if($("a_id_more")){
+			var obj = $("a_id_more");
+			obj.className="down";
+			obj.innerHTML="更 多";
+		}
+		$("gjcx_div").style.display = "none";
+	}
+}
+</script>
+
+<div class="search_advanced">
+
+	<!-- 用户身份 -->
+	<input type="hidden" name="userStatus" id="userStatus" value="stu">
+	<input type="hidden" id="yhlx" value="">
+	<input type="hidden" name="searchPath" id="searchPath" value="qjsqbase.do">
+	<!-- 模糊查询 -->
+	<div class="adv_filter">
+		<table border="0" width="100%">
+			<tbody>
+				<tr>
+					<td style="padding-left:68px;position: relative">
+
+						<!-- 学生用户 -->
+						
+                			学号：20202200113&nbsp;&nbsp;
+                			<input type="hidden" name="searchModel.input_xh" id="input_xh" value="20202200113" size="25">&nbsp;&nbsp;
+                			姓名：徐闪闪
+                			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                		
+
+						<!-- 非学生用户 -->
+						
+
+						<input type="hidden" name="ts_msg" id="ts_msg" value="">
+						<input type="hidden" name="go" value="a">
+
+						
+
+						
+							<button type="button" class="btn_cx" id="search_go" style="display: none" onclick="setSearchTj();searchRs();return false;">
+								查 询
+							</button>
+						
+
+						
+						<input type="hidden" id="mhcx_lx" value="all">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- 模糊查询 end-->
+
+	<!-- 已选条件 -->
+	<div class="selected-attr" id="yxtj_div" style="display: none">
+		<h3>
+			已选条件：
+		</h3>
+		<dl id="yxtj_dl">
+
+		</dl>
+	</div>
+	<!-- 已选条件 end-->
+
+	<!-- 高级查询-->
+	<div class="prop-item" id="gjcx_div" style="display:none"></div>
+	<!-- 高级查询 end-->
+</div>
+
+<!-- 伸缩按钮 -->
+
+<!-- 伸缩按钮 end-->
+
+<div id="searchTjDiv" style="display: none">
+	
+
+		<!-- 条件循环 -->
+		
+		<!-- 条件循环 end -->
+
+		<!-- 开始时间 -->
+		
+
+		<!-- 结束时间 -->
+		
+
+		<!-- 构建已选条件 -->
+		<script language="javascript" defer="defer">
+//			setTimeout("setKssjOrJssj()",2000); 
+//			setTimeout("creatClickedTjBySearch()",2000);
+		</script>
+	
+</div>
+
+<script language="javascript" defer="defer">
+	//高级查询所配置的地址
+	var searchPath = $("searchPath").value;
+	var yhlx = $("yhlx").value;;
+	var v4Path = stylePath;
+	var jxid = "";
+
+	//加载军训id
+	if(document.getElementById("jxid")){
+		jxid = document.getElementById("jxid").value;
+	}
+	
+	//其他数据
+ 	var parameter = {
+ 		"searchPath":searchPath,
+ 		"stylePath":v4Path,
+ 		"yhlx":yhlx,
+ 		"jxid":jxid
+	};
+	
+	var url="seachTjManage.do?method=createSearchTj";
+	//jQuery.post(url,parameter,function(result){});
+	jQuery("#gjcx_div").load(url,parameter,function(){
+			//构建已选条件
+			setKssjOrJssj();
+			creatClickedTjBySearch();
+		});
+	
+	//联动部门
+	function creatBmHtml(bmlx){
+		
+		var ul_id = bmlx+"_ul";
+		
+		var nj_click = getClickNj();
+		var xy_click = getClickXy();
+		var zy_click = getClickZy();
+		
+		var v4Path = stylePath;
+
+		//参数
+	 	var parameter = {
+	 		"nj":nj_click.join("!!@@!!"),
+	 		"xy":xy_click.join("!!@@!!"),
+	 		"zy":zy_click.join("!!@@!!"),
+	 		"bmlx":bmlx,
+	 		"stylePath":v4Path
+		};
+	
+		var url="seachTjManage.do?method=creatBmHtml";
+
+		jQuery.ajaxSetup({async:false});
+		
+		if($(ul_id)){
+			jQuery("#"+ul_id).load(url,parameter,function(){
+			
+				var bm_num_id = bmlx+"_num";
+				var bm_more_id = bmlx+"_more";
+				var num = $(bm_num_id).value;
+				
+				if(num < 12){
+					if($(bm_more_id)){
+						$(bm_more_id).style.display = "none";
+					}
+				}else{
+					$(bm_more_id).style.display = "";
+					$(bm_more_id).innerHTML = "更多";
+					$(bm_more_id).className = "more_down";
+				}
+			});
+		}
+		
+		jQuery.ajaxSetup({async:true});	
+	}
+	
+	//联动公寓
+	function creatGyHtml(bmlx){
+		
+		var ul_id = bmlx+"_ul";
+		//校区代码
+		var xqdm_click = getClickXqdm();
+		//园区代码
+		var yqdm_click = getClickYqdm();
+		//楼栋
+		var ld_click = getClickLd();
+		//层号
+		var ch_click = getClickTj("ch");
+		
+		var v4Path = stylePath;
+
+		//参数
+	 	var parameter = {
+		 	"xqdm":xqdm_click.join("!!@@!!"),
+		 	"yqdm":yqdm_click.join("!!@@!!"),
+	 		"ld":ld_click.join("!!@@!!"),
+	 		"ch":ch_click.join("!!@@!!"),
+	 		"bmlx":bmlx,
+	 		"stylePath":v4Path
+		};
+	
+		var url="seachTjManage.do?method=creatGyHtml";
+
+		jQuery.ajaxSetup({async:false});
+		
+		if($(ul_id)){
+			jQuery("#"+ul_id).load(url,parameter,function(){
+			
+				var bm_num_id = bmlx+"_num";
+				var bm_more_id = bmlx+"_more";
+				var num = $(bm_num_id).value;
+
+				if(num < 8){
+					if($(bm_more_id)){
+						$(bm_more_id).style.display = "none";
+					}
+				}else{
+					$(bm_more_id).style.display = "";
+					$(bm_more_id).innerHTML = "更多";
+					$(bm_more_id).className = "more_down";
+				}
+			});
+		}
+		
+		jQuery.ajaxSetup({async:true});	
+	}
+
+	//联动违纪类别
+	function creatWjHtml(ldlx){
+		
+		var ul_id = ldlx+"_ul";
+		//违纪类别大类
+		var gyjllbdldm_click = getClickGyjllbdldm();
+		var v4Path = stylePath;
+
+		//参数
+	 	var parameter = {
+		 	"gyjllbdldm":gyjllbdldm_click.join("!!@@!!"),
+	 		"ldlx":ldlx,
+	 		"stylePath":v4Path
+		};
+	
+		var url="seachTjManage.do?method=creatWjHtml";
+
+		jQuery.ajaxSetup({async:false});
+		
+		if($(ul_id)){
+			jQuery("#"+ul_id).load(url,parameter,function(){
+			
+				var bm_num_id = bmlx+"_num";
+				var bm_more_id = bmlx+"_more";
+				var num = $(bm_num_id).value;
+
+				if(num < 8){
+					if($(bm_more_id)){
+						$(bm_more_id).style.display = "none";
+					}
+				}else{
+					$(bm_more_id).style.display = "";
+					$(bm_more_id).innerHTML = "更多";
+					$(bm_more_id).className = "more_down";
+				}
+			});
+		}
+		
+		jQuery.ajaxSetup({async:true});	
+	}
+</script>
+
+				<!-- 过滤条件 end-->
+		</div>
+		</form>
+		<div class="toolbox">
+			<!--标题start-->
+			<h3 class="datetitle_01">
+				<span style="width: 50%"> 请假申请列表<a id="title" href="javascript:;" style="float:right;margin-right:30px;color: blue"></a> </span>
+			</h3>
+			<table id="dataTable" class="dateline" width="100%"><thead><tr class="nowrap"><td width="2%"><input type="checkbox" name="grid_selectAll"></td><th sortname="qjsqid" style="display: none;">请假申请id</th><th sortname="splcid" style="display: none;">审批流程</th><th sortname="xn">学年</th><th sortname="xqmc">学期</th><th sortname="xh">学号</th><th sortname="xm">姓名</th><th sortname="qjlxmc">请假类型</th><th sortname="qjts">请假天数</th><th sortorder="desc" sortname="sqsj"><a href="javascript:void(0);" name="grid_sort" class="Sort_down" title="三角向上的是升序，向下的是降序">申请时间</a></th><th sortname="qjzt" style="display: none;">状态</th><th sortname="shzt">审核状态</th><th sortname="shzt" style="display: none;">审核状态</th><th sortname="xjztmc">销假状态</th></tr></thead><tbody><tr rowindex="0" selectrow="true" style="background: rgb(203, 228, 248);"><td style="width:12px;"><input type="checkbox" name="grid_key"></td><td style="word-break: break-all; display: none;">fe28297c818def2ff57d925bb13adbdf</td><td style="word-break: break-all; display: none;">24FD55CCCF4639C7E0507A310F00518D</td><td style="word-break:break-all;">2020-2021</td><td style="word-break:break-all;">第一学期</td><td style="word-break:break-all;"><a href="javascript:void(0);" onclick="ckxx(&#39;fe28297c818def2ff57d925bb13adbdf&#39;)" class="name">20202200113</a></td><td style="word-break:break-all;">徐闪闪</td><td style="word-break:break-all;">因病请假</td><td style="word-break:break-all;">1</td><td style="word-break:break-all;">2020-10-13 16:10:59</td><td style="word-break: break-all; display: none;">1</td><td style="word-break:break-all;">通过</td><td style="word-break: break-all; display: none;">5</td><td style="word-break:break-all;">未销假</td></tr></tbody></table>
+			<div id="pager" class="pagination"><div class="pageleft"><p class="pagenum">第<input type="text" id="pageNum" value="1" style="text-align:center;width:20px;">/<span class="red" id="pageCount">1</span>页，每页显示<select name="numList" id="numList"><option value="10">10</option><option value="20">20</option><option value="50">50</option><option value="100">100</option><option value="200">200</option></select>条 /  共<span class="red" id="rowConut">1</span>条记录 </p></div><div class="pageright"><div class="paging"> <a id="first" class="first pointer" title="首页">首&nbsp;页</a>&nbsp;<a id="back" class="prev pointer" title="上一页">上一页</a>&nbsp;<a id="next" class="next pointer" title="下一页">下一页</a>&nbsp;<a id="last" class="last pointer" title="末页">末&nbsp;页</a></div></div></div>
+		</div>
+	
+
+<div><div id="maskLevel" style="position:absolute;top:0;left:0;display:none;text-align:center;z-index:10000;"></div><div id="ym-window" style="position:absolute;z-index:10001;display:none"><div class="ym-tl" id="ym-tl"><div class="ym-tr"><div class="ym-tc" style="cursor:move;"><div class="ym-header-text"></div><div class="ym-header-tools"><div class="ymPrompt_min" title="最小化"><strong>0</strong></div><div class="ymPrompt_max" title="最大化"><strong>1</strong></div><div class="ymPrompt_close" title="关闭"><strong>r</strong></div></div></div></div></div><div class="ym-ml" id="ym-ml"><div class="ym-mr"><div class="ym-mc"><div class="ym-body" style="position:relative"></div></div></div></div><div class="ym-ml" id="ym-btnl"><div class="ym-mr"><div class="ym-btn"></div></div></div><div class="ym-bl" id="ym-bl"><div class="ym-br"><div class="ym-bc"></div></div></div></div></div></body></html>
